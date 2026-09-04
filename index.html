@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Playlist</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.1.1/css/pico.classless.min.css">
+  </head>
+  <body>
+    <main>
+      <h1>My Playlist</h1>
+      <p>Songs from a chart, served by an API I deployed myself.</p>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
