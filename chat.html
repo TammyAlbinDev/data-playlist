@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ask the Chart</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.1.1/css/pico.classless.min.css">
+  </head>
+  <body>
+    <main>
+      <h1>Ask the Chart a Question</h1>
+      <p><a href="index.html">Back to the playlist</a></p>
+      <input id="question-box" type="text" placeholder="Which artist appears most often on this chart?">
+      <button id="ask-button" type="button">Ask</button>
+      <button id="top-question-button" type="button">Ask about the top artist</button>
+      <p id="asked"></p>
+      <p id="answer"></p>
+      <p id="answer-model"></p>
+    </main>
+    <script src="chat.js"></script>
+  </body>
+</html>

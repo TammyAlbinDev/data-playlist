@@ -4,6 +4,7 @@ let topButton = document.getElementById("top-button");
 let artistButton = document.getElementById("artist-button");
 let saveButton = document.getElementById("save-button");
 let nextButton = document.getElementById("next-button");
+let startOverButton = document.getElementById("start-over-button");
 
 let songs = [];
 let index = 0;
@@ -74,12 +75,29 @@ nextButton.addEventListener("click", function () {
 
 saveButton.addEventListener("click", function () {
   let song = songs[index];
+  let entry = song["Track Name"] + " — " + song.Artist;
 
-  if (favorites.length < 5) {
-    favorites.push(song["Track Name"] + " — " + song.Artist);
+  let alreadySaved = false;
+
+  favorites.forEach(function (favorite) {
+    if (favorite === entry) {
+      alreadySaved = true;
+    }
+  });
+
+  if (alreadySaved) {
+    document.getElementById("save-message").textContent = "That track is already saved.";
+  } else if (favorites.length < 5) {
+    favorites.push(entry);
     renderFavorites();
     document.getElementById("save-message").textContent = "Saved.";
   } else {
     document.getElementById("save-message").textContent = "Your Top 5 is full.";
   }
+});
+
+startOverButton.addEventListener("click", function () {
+  favorites = [];
+  renderFavorites();
+  document.getElementById("save-message").textContent = "";
 });
