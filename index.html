@@ -10,10 +10,14 @@
     <main>
       <h1>My Playlist</h1>
       <p>Songs from a chart, served by an API I deployed myself.</p>
-      <button id="song-button" type="button">Show me a track</button>
+      <input id="artist-input" type="text" placeholder="Enter an artist">
+      <button id="song-button" type="button">Load the chart</button>
+      <button id="back-button" type="button">Back</button>
+      <button id="next-button" type="button">Next</button>	 
       <article>
       <h2 id="track-name">Press the button</h2>
       <p id="track-facts"></p>
+      <p id="track-count"></p>	
     </article>	
   </main>
     <script src="script.js"></script>
